@@ -19,6 +19,7 @@ brent-oil-analysis/
 │ ├── brent_oil_prices.csv # Daily Brent oil prices
 ├── notebooks/
 │ └── exploratory_analysis.ipynb # EDA and transformation
+  └── Insight_generation.ipynb
 ├── scripts/
 ├── visuals/
 │ ├── brent_trend.png
@@ -28,6 +29,7 @@ brent-oil-analysis/
 
 - **Trend**: Brent oil prices exhibit long-term upward and downward trends with abrupt changes due to external shocks.
 
+---
 
 ## 🔍 Change Point Modeling (PyMC3)
 
