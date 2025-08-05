@@ -69,13 +69,13 @@ Build an interactive web dashboard to visualize analysis results, enabling stake
 
 ---
 
-## Methodology, Recommendations, and Conclusion
+## summary
 
-All three tasks leverage time series analytics, correlation modeling, and modern web development to build a full-stack analytical product. Our approach includes temporal segmentation, structured event mapping, and dynamic visualizations.
+- All three tasks leverage time series analytics, correlation modeling, and modern web development to build a full-stack analytical product. Our approach includes temporal segmentation, structured event mapping, and dynamic visualizations.
 
-**Recommendations:** Strengthen event labeling automation, enrich models with more macroeconomic features, and integrate forecasting modules for proactive decision-making.
+- strengthen event labeling automation, enrich models with more macroeconomic features, and integrate forecasting modules for proactive decision-making.
 
-**Conclusion:** This project offers an actionable framework for understanding Brent oil volatility and guiding investment, energy security policy, and risk management using explainable data-driven tools.
+- This project offers an actionable framework for understanding Brent oil volatility and guiding investment, energy security policy, and risk management using explainable data-driven tools.
 
 ---
 
