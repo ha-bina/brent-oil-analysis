@@ -1,42 +1,96 @@
-# 📈 Brent Oil Price Change Point Analysis
 
-This repository contains a structured analysis of Brent crude oil prices to detect structural changes and associate them with major geopolitical and economic events. It combines classical time series exploration with Bayesian change point detection.
+# Brent Oil Price Analysis Project
 
----
-
-## 🚀 Objectives
-
-- Analyze trends, volatility, and structural shifts in Brent crude oil prices.
-- Identify significant change points using Bayesian modeling.
-- Associate those points with real-world events (e.g., OPEC decisions, wars, pandemics).
-- Quantify the impact of each event-driven structural change.
+This repository provides a comprehensive pipeline for analyzing how major political and economic events influence Brent crude oil prices. The project consists of three main tasks: time series analysis with change point detection, event correlation analysis, and an interactive dashboard application.
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
+
+```
 brent-oil-analysis/
 ├── data/
-│ ├── brent_oil_prices.csv # Daily Brent oil prices
+│   ├── raw/
+│   ├── processed/
+│   └── events/
 ├── notebooks/
-│ └── exploratory_analysis.ipynb # EDA and transformation
-  └── Insight_generation.ipynb
-├── scripts/
-├── visuals/
-│ ├── brent_trend.png
-│ └── change_points_plot.png
+│   ├── Task1_TimeSeriesAnalysis.ipynb
+│   ├── Task2_EventCorrelation.ipynb
+│   └── Task3_DashboardDesign.md
+├── src/
+│   ├── analysis/
+│   ├── models/
+│   └── utils/
+├── dashboard/
+│   ├── backend/ (Flask APIs)
+│   └── frontend/ (React app)
+├── reports/
+│   └── final_report.pdf
+├── requirements.txt
 └── README.md
-## 📊 Exploratory Analysis
-
-- **Trend**: Brent oil prices exhibit long-term upward and downward trends with abrupt changes due to external shocks.
+```
 
 ---
 
-## 🔍 Change Point Modeling (PyMC3)
+## Task 1: Time Series Analysis and Change Point Detection
 
-- **Model Type**: Bayesian change point model with PyMC3.
-- **Transformation**: Log returns used for stationarity and volatility analysis.
-- **Change Point**: Estimated using a discrete uniform prior over the time series index.
-- **Posterior Inference**:
-  - Switch date identified with a sharp peak in the posterior distribution.
-  - Distinct shifts in mean log returns before and after the change.
+Analyze Brent oil price data to identify significant change points using statistical and machine learning approaches. This includes preprocessing, visualizing trends, and applying methods like Bayesian Change Point Detection or Ruptures to isolate periods of abrupt change.
+
+**Deliverables:**
+- Preprocessed and cleaned Brent price time series.
+- Change points annotated with corresponding dates.
+- Visualizations of segmented time periods.
+
+## Task 2: Event Correlation Analysis
+
+Investigate the correlation between major political/economic events and Brent oil price fluctuations. Events include geopolitical conflicts, OPEC decisions, sanctions, and global economic downturns.
+
+**Deliverables:**
+- Curated event dataset.
+- Event-impact window analysis.
+- Statistical summaries and correlation plots showing event-price impact.
+
+## Task 3: Interactive Dashboard for Analysis Results
+
+Build an interactive web dashboard to visualize analysis results, enabling stakeholders to explore trends and understand how specific events influence price shifts.
+
+**Backend (Flask):**
+- REST APIs to serve time series, event data, and model outputs.
+- Optional: Real-time data integration support.
+
+**Frontend (React):**
+- Interactive charts using Recharts or D3.js.
+- Filters for date ranges, event types, and statistical indicators.
+- Event highlighting to visualize spikes/drops linked to news or events.
+
+**Deliverables:**
+- A responsive and informative dashboard for stakeholder exploration.
+- Drill-down functionality for inspecting trends around specific events.
+
+---
+
+## Methodology, Recommendations, and Conclusion
+
+All three tasks leverage time series analytics, correlation modeling, and modern web development to build a full-stack analytical product. Our approach includes temporal segmentation, structured event mapping, and dynamic visualizations.
+
+**Recommendations:** Strengthen event labeling automation, enrich models with more macroeconomic features, and integrate forecasting modules for proactive decision-making.
+
+**Conclusion:** This project offers an actionable framework for understanding Brent oil volatility and guiding investment, energy security policy, and risk management using explainable data-driven tools.
+
+---
+
+## Installation
+
+Clone the repository and install required packages:
+
+```bash
+git clone https://github.com/ha-bina/brent-oil-analysis.git
+cd brent-oil-analysis
+pip install -r requirements.txt
+```
+
+For dashboard setup (React + Flask), refer to `dashboard/README.md`.
+
+
+
 
